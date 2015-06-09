@@ -1,0 +1,39 @@
+0:
+    Id: 111
+    Nachname: Mustermann
+    Vorname: Max
+    Geschlecht: Maennlich
+    Geburtstag: 01.01.1960
+    Strasse: Musterstrasse
+    Plz: 11122
+    Ort: Musterstadt
+    Nummer: 23
+    Bordkartennummer: 123456
+    ZahlungsmittelId: 1
+    Ausweisnummer: 123425435
+1:
+    Id: 112
+    Nachname: Mustermann
+    Vorname: Maxim
+    Geschlecht: Weiblich
+    Geburtstag: 01.02.1980
+    Strasse: Musterstrasse
+    Plz: 11122
+    Ort: Musterstadt
+    Nummer: 24
+    Bordkartennummer: 123457
+    ZahlungsmittelId: 1
+    Ausweisnummer: 123425435
+2:
+    Id: 113
+    Nachname: Kleber
+    Vorname: Klaus
+    Geschlecht: Maennlich
+    Geburtstag: 01.03.1940
+    Strasse: Musterstrasse
+    Plz: 11122
+    Ort: Musterstadt
+    Nummer: 266
+    Bordkartennummer: 123458
+    ZahlungsmittelId: 2
+    Ausweisnummer: 123425435

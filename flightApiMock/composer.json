@@ -1,0 +1,13 @@
+{
+    "name": "patrick/flight-api-mock",
+    "require": {
+        "slim/slim": "~2.0",
+        "symfony/yaml": "~2.7"
+    },
+    "authors": [
+        {
+            "name": "Patrick Selge",
+            "email": "patrick.selge@comulus.io"
+        }
+    ]
+}
