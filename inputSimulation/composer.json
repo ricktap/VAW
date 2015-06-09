@@ -1,0 +1,18 @@
+{
+    "name": "patrick/input-simulation",
+    "require": {
+        "slim/slim": "~2.0",
+        "nategood/httpful": "^0.2.19"
+    },
+    "authors": [
+        {
+            "name": "Patrick Selge",
+            "email": "patrick.selge@comulus.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+   	        "VAW\\": "src/"
+        }
+    }
+}
