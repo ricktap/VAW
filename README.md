@@ -61,7 +61,6 @@ Mockadapter, der später gegen die Schnittstelle des Servers ausgetauscht wird.
 
 ![**Abb 3: Passagiere mit Gepäck**](manual/return.png "Passagiere mit Gepäck")
 
-
 ## 4. Todo
 * Schreiben der Serverkomponente
 * Austausch des Flughafen API Mocks, gegen die echte Schnittstelle des Projektbüros
