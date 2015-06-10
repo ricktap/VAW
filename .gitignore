@@ -1,3 +1,4 @@
 vendor
 .phpintel
 .DS_Store
+.idea/
