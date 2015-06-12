@@ -4,7 +4,7 @@
 Die **Virtual Airline Wildau** ist ein Projekt der TH-Wildau, das beginnend mit der IM-14 die Abläufe eines Flughafens
 und verschiedener Fluglinien simulieren soll. Hierfür wurden zunächst Gruppen für die App, die Frachtverwaltung und
 das Vorfeld gebildet. Zudem werden die drei Gruppen durch das Projektbüro unterstützt, die für die Implementierung
-der Flughafen API zuständig sind, weöche zunächst nur als Mock vorliegt.
+der Flughafen API zuständig sind, welche zunächst nur als Mock vorliegt.
 Dieses Repository beinhaltet die Simulation der Frachtgruppe und besteht aus einer Serverkomponente,
 einer Inputsimulation, einer Hardwaresimulation und einem Mock der Flughafen API (zu Testzwecken).
 
