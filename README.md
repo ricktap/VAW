@@ -53,7 +53,7 @@ genügt aber den Ansprüchen der Input Simulation.
 
 ![**Abb 2: Passagierdetails**](manual/getId.png "Passagierdetails")
 
-### 3.2 Inputsimulation
+### 3.2 Input Simulation
 
 **GET:** http://input.vaw.local:8888/
 
