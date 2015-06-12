@@ -66,7 +66,7 @@ Mockadapter, der später gegen die Schnittstelle des Servers ausgetauscht wird.
 
 ### 3.4 Server Component
 
-**GET:** http://server.vaw.local:8888/api/baggage
+**GET:** http://server.vaw.local:8888/api/baggage\\
 **POST:** http://server.vaw.local:8888/api/baggage <- Params: passenger_id
 
 ## 4. Todo
