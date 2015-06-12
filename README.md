@@ -27,6 +27,9 @@ werden. Die Konfiguration des Webservers zeigt erneut auf den eben verwendeten O
  ```/inputSimulation```. Als URL wird die Adresse ```input.vaw.local```
 empfohlen, um weitere Konfigurationen zu vermeiden. Auch hier sollte der Port auf ```8888``` eingestellt werden.
 
+### 2.3 Server Component
+In dem Ordner ```serverComponent```liegt die Server Komponente. Die Server Komponente hat als einziges Modul eine Anbindung an die Datenbank und dient dem System daher als Persistenzmodul.
+
 ## 3. Verwendung
 Die Komponenten stellen eine Reihe von Endpoints zu Verfügung, die an dieser Stelle kurz erläutert werden sollen.
 
@@ -60,6 +63,11 @@ dann zwischen einem und drei Gepäckstücke erzeugt. Momentan erfolgt die Baggag
 Mockadapter, der später gegen die Schnittstelle des Servers ausgetauscht wird.
 
 ![**Abb 3: Passagiere mit Gepäck**](manual/return.png "Passagiere mit Gepäck")
+
+### 3.4 Server Component
+
+**GET:** http://server.vaw.local:8888/api/baggage
+**POST:** http://server.vaw.local:8888/api/baggage <- Params: passenger_id
 
 ## 4. Todo
 * Schreiben der Serverkomponente
