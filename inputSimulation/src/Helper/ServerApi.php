@@ -15,10 +15,16 @@ class ServerApi
     /**
      * Grabs the baggage id from the server
      * @return int new baggage id, created on the server
-     * @todo currently just a mockup, needs to call the real server (still string atm)
      */
-    public function getBaggageId()
+    public function getBaggageId($passengerId)
     {
-        return uniqid();
+        $response = Request::post("{$this->baseUrl}/baggage?passenger_id={$passengerId}")
+            ->send();
+
+        if ($response->body !== null && $response->body->id !== null) {
+            return $response->body->id;
+        }
+
+        return [];
     }
 }

@@ -34,11 +34,11 @@ class IndexController
 
     private function generateBaggagesForPassenger($passenger)
     {
-        $serverApi = new ServerApi("");
+        $serverApi = new ServerApi("http://server.vaw.local:8888/api");
         $passenger->baggages = array();
 
         for ($i = 0; $i < $this->getRandomBaggageAmount(); $i++) {
-            $baggage = new Baggage($serverApi->getBaggageId());
+            $baggage = new Baggage($serverApi->getBaggageId($passenger->Id));
             $passenger->baggages[] = $baggage->toArray();
         }
 
