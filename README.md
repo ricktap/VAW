@@ -74,3 +74,4 @@ Mockadapter, der später gegen die Schnittstelle des Servers ausgetauscht wird.
 * Schreiben der Serverkomponente
 * Austausch des Flughafen API Mocks, gegen die echte Schnittstelle des Projektbüros
 * Simulation der Einzelschritte (User Input) innerhalb der Inputsimulation
+* Umbau der Input Simulation nach Laravel > Verwenden der Message Queue, zum Absetzen Zeitversetzter Background Prozesse > Alternative: Command Center in Laravel bauen, dass Input Simulation per Queue called!
