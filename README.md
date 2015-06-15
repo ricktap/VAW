@@ -1,5 +1,8 @@
 # Virtual Airline Wildau: Frachtsimulation
 
+## ANMERKUNG
+Dieses Repository wird in absehbarer Zeit in unterrepositories aufgeteilt. An dieser Stelle wird sich das Deployment Repository befinden.
+
 ## 1. Einleitung
 Die **Virtual Airline Wildau** ist ein Projekt der TH-Wildau, das beginnend mit der IM-14 die Abläufe eines Flughafens
 und verschiedener Fluglinien simulieren soll. Hierfür wurden zunächst Gruppen für die App, die Frachtverwaltung und
