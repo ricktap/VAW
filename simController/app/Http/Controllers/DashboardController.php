@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use \Httpful\Request as HttpRequest;
+use App\Jobs\SimulatePassenger;
+use Illuminate\Support\Facades\Queue;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Event;
 
 class DashboardController extends Controller
 {
@@ -16,10 +21,32 @@ class DashboardController extends Controller
 
     public function run()
     {
-        for ($i = 0; $i < 3; $i++) {
-            event(new \App\Events\BaggageCreated(["id" => 1]));
-            sleep(2);
+        $passengers = $this->getAllPassengers();
+
+        if (count($passengers) === 0) {
+            return 0;
         }
-        return "event fired";
+
+        $counter = 0;
+        for ($i = 0; $i < 4; $i++) {
+            foreach ($passengers as $passenger) {
+                $job = (new SimulatePassenger($passenger->Bordkartennummer))->onQueue('baggages');
+                $this->dispatch($job);
+                $counter++;
+                //Event::fire(new \App\Events\BaggageCreated(["Id" => 123, "baggages" => []]));
+            }
+        }
+
+        return $counter;
+    }
+
+    private function getAllPassengers()
+    {
+        $response = HttpRequest::get("http://flight.vaw.local:8888/api/list")->send();
+
+        if ($response->code < 300 && $response->body !== null) {
+            return $response->body;
+        }
+        return [];
     }
 }
