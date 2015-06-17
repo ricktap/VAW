@@ -14,22 +14,19 @@ class IndexController
         $this->app = \Slim\Slim::getInstance();
     }
 
-    public function run()
+    public function run($id)
     {
         $this->app->response->headers->set('Content-Type', 'application/json;charset=utf-8');
         $this->app->response->setStatus(200);
 
         $flightApi = new FlightApi("http://flight.vaw.local:8888/api");
 
-        $passengers = $flightApi->downloadPassengerList();
-        $pOut = array();
+        $passenger = $flightApi->downloadPassengerData($id);
+        $passengerData = $this->generateBaggagesForPassenger($passenger);
 
-        foreach ($passengers as $passenger) {
-            $passenger = $flightApi->downloadPassengerData($passenger->Bordkartennummer);
-            $pOut[] = $this->generateBaggagesForPassenger($passenger);
-        }
+        sleep($this->getRandomSleepTime());
 
-        $this->app->response->setBody(json_encode($pOut));
+        $this->app->response->setBody(json_encode($passengerData));
     }
 
     private function generateBaggagesForPassenger($passenger)
@@ -49,5 +46,10 @@ class IndexController
     private function getRandomBaggageAmount()
     {
         return mt_rand(1, 3);
+    }
+
+    private function getRandomSleepTime()
+    {
+        return mt_rand(0, 2);
     }
 }
