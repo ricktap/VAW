@@ -2,7 +2,8 @@
     "name": "patrick/input-simulation",
     "require": {
         "slim/slim": "~2.0",
-        "nategood/httpful": "^0.2.19"
+        "nategood/httpful": "^0.2.19",
+        "slim/twig-view": "^1.1"
     },
     "authors": [
         {
