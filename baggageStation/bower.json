@@ -1,0 +1,21 @@
+{
+  "name": "simController",
+  "version": "0.1",
+  "homepage": "https://github.com/ricktap/VAW",
+  "authors": [
+    "Patrick Selge <patrick.selge@comulus.io>"
+  ],
+  "description": "Simulation Control Unit",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
