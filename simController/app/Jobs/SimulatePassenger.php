@@ -14,7 +14,7 @@ class SimulatePassenger extends Job implements SelfHandling, ShouldQueue
 {
     use InteractsWithQueue, SerializesModels;
 
-    protected $bordkartennummer;
+    public $bordkartennummer;
 
     /**
      * Create a new job instance.
@@ -43,6 +43,6 @@ class SimulatePassenger extends Job implements SelfHandling, ShouldQueue
         if ($response->code < 300 && $response->body !== null) {
             return $response->body;
         }
-        return false;
+        return ["id" => $bordkartennummer];
     }
 }
