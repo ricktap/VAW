@@ -14,6 +14,11 @@ class IndexController
         $this->app = \Slim\Slim::getInstance();
     }
 
+    public function twig()
+    {
+        return $this['view']->render($this->app->response, 'login.html');
+    }
+
     public function run($id)
     {
         $this->app->response->headers->set('Content-Type', 'application/json;charset=utf-8');
