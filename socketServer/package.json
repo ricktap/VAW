@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {
+    "socket.io": "*",
+    "ioredis": "*",
+    "express": "*"
+  }
+}

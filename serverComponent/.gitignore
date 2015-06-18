@@ -1,4 +1,6 @@
 /vendor
-/node_modules
+node_modules
 .env
 database.php
+public/js/vendor.js
+public/js/socket.io.js

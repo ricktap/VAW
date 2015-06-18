@@ -3,3 +3,7 @@
 .env
 database.php
 resources/assets/vendor
+public/js/vendor.js
+public/js/socket.io.js
+public/js/vendor.js.map
+public/js/jquery.min.map
