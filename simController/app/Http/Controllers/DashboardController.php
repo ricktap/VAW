@@ -33,7 +33,6 @@ class DashboardController extends Controller
                 $job = (new SimulatePassenger($passenger->Bordkartennummer))->onQueue('baggages');
                 $this->dispatch($job);
                 $counter++;
-                //Event::fire(new \App\Events\BaggageCreated(["Id" => 123, "baggages" => []]));
             }
         }
 
