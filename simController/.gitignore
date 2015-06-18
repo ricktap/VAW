@@ -3,3 +3,5 @@
 .env
 database.php
 resources/assets/vendor
+public/js/vendor.js
+public/js/socket.io.js
