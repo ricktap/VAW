@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Mehr Gepäckstücke?{% endblock %}
+
+{% block content %}
+    <div class="desc">
+        Möchten Sie ein weiteres Gepäckstück aufgeben?
+    </div>
+
+    <div class="decide-buttons">
+        <button class="btn btn-lg">Ja</button>
+        <a href="/decideCustoms" class="btn btn-lg btn-default">Nein</a>
+    </div>
+{% endblock %}
+
+{% block progress %}45{% endblock %}
+
+{% block rightbutton %}
+    <button type="submit" class="btn btn-default btn-lg btn-primary">Abbrechen</button>
+{% endblock %}

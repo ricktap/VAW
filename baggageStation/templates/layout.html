@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>Self Bag Drop | {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/public/assets/vendor/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/public/assets/css/app.css" />
 </head>
 <body>
     <div class="container-fluid">
         <div class="page-header">
-            <h1><img src="public/assets/img/tfhlogo.gif" class="logo"> Self Bag Drop: <span class="subtitle">{% block subtitle %}{% endblock %}</span></h1>
+            <h1><img src="public/assets/img/tfhlogo.gif" class="logo"> Self Bag Drop: <span class="subtitle">{{ block('title') }}</span></h1>
+
         </div>
         <div class="row">
             <div class="col-xs-12">
@@ -17,11 +18,24 @@
         </div>
         <footer class="footer">
             <div class="row">
-                <div class="col-xs-6 col-sm-8 col-md-9">
-                    {% block progress %}{% endblock %}
+                <div class="col-xs-5 col-sm-7 col-md-8">
+                    <div class="progress" style="height: 10px">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{% block progress %}{% endblock %}" aria-valuemin="0" aria-valuemax="100" style="width: {{ block('progress') }}%;">
+                            <span class="sr-only">{{ block('progress') }}% Complete</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 control">
-                    {% block control %}{% endblock %}
+                <div class="col-xs-7 col-sm-5 col-md-4 control">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div style="width: 50%; padding: 5px;" class="pull-left">
+                                    {% block leftbutton %}{% endblock %}
+                                </div>
+                                <div style="width: 50%; padding: 5px;" class="pull-right">
+                                    {% block rightbutton %}{% endblock %}
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </footer>

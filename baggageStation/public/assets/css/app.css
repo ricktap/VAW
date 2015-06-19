@@ -29,16 +29,21 @@
 }
 
 .control .btn {
-    width: 49%;
+    width: 100%;
 }
 
 .desc {
     padding-top: 70px;
-    padding-bottom: 45px;
+    padding-bottom: 35px;
     text-align: center;
     font-size: 1.6em;
     width: 80%;
     margin: 0 auto;
+}
+
+.desc.small {
+    padding-top: 30px;
+    padding-bottom: 0px;
 }
 
 .form-group-lg {
@@ -49,14 +54,38 @@
 
 .data-table {
     font-size: 1.4em;
+    table-layout: fixed;
 }
 
 .data-table > tbody > tr > td {
     border: 0;
     padding: 5px 8px;
+    width: *;
 }
 
 .data-table > tbody > tr > td:first-child {
     font-weight: bold;
     text-align: right;
+}
+
+.decide-buttons {
+    margin:  auto;
+    width: 100%;
+    text-align: center;
+}
+
+.decide-buttons .btn {
+    min-width: 220px;
+    height: 80px;
+    line-height: 60px;
+    margin: 0px 5px;
+    background-color: #eee;
+    border-color: #ccc;
+    border-radius: 0;
+    font-size: 1.5em;
+}
+
+.decide-buttons .btn:hover {
+    background-color: #ddd;
+    border-color: #bbb;
 }

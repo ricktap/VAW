@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Zu verzollen{% endblock %}
+
+{% block content %}
+    <div class="desc">
+        Haben Sie anmeldepflichtige Waren beim Zoll anzumdelden?
+    </div>
+
+    <div class="decide-buttons">
+        <button class="btn btn-lg">Ja</button>
+        <button class="btn btn-lg">Nein</button>
+    </div>
+{% endblock %}
+
+{% block progress %}45{% endblock %}
+
+{% block leftbutton %}
+    <button type="submit" class="btn btn-default btn-lg btn-primary">Abbrechen</button>
+{% endblock %}
+
+{% block rightbutton %}
+    <a href="/dropBaggage" class="btn btn-default btn-lg btn-primary">OK</a>
+{% endblock %}

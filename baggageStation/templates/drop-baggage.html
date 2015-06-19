@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}Gepäck wiegen{% endblock %}
+
+{% block content %}
+    <div class="desc">
+        Stellen Sie das zu wiegende Gepäckstück auf das Band.
+    </div>
+
+    <div class="desc small">
+        <p><strong>Ihr Gepäckstück wiegt {{ weight }} kg</strong></p>
+        {% if weight <= allowedWeight %}
+            <p class="text-success">Sie sind innerhalb der erlaubten Freimenge</p>
+        {% else %}
+            <p class="text-danger">Sie sind außerhalb der erlaubten Freimenge</p>
+        {% endif %}
+    </div>
+
+    <div class="desc">
+        {% if weight <= allowedWeight %}
+            <p><i>Wenn Sie jetzt ihr Gepäck aufgeben möchten, drücken Sie auf Gepäck aufgeben.</i></p>
+        {% else %}
+            <p><i>Wenn Sie jetzt für ihr Übergepäck bezahlen möchten, drücken Sie auf Übergepäck bezahlen.</i></p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block progress %}30{% endblock %}
+
+{% block leftbutton %}
+    <button type="submit" class="btn btn-default btn-lg btn-primary">Abbrechen</button>
+{% endblock %}
+
+{% block rightbutton %}
+    <a href="/anotherBag" class="btn btn-default btn-lg btn-primary">
+        {% if weight <= allowedWeight %}
+            Gepäck aufgeben
+        {% else %}
+            Übergepäck bezahlen
+        {% endif %}
+    </a>
+{% endblock %}
