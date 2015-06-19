@@ -28,6 +28,11 @@
     margin: 0;
 }
 
+.control {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .control .btn {
     width: 100%;
 }
