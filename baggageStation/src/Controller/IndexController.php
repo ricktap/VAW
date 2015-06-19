@@ -16,7 +16,7 @@ class IndexController
 
     public function twig()
     {
-        return $this['view']->render($this->app->response, 'login.html');
+        $this->app->render('login.html', []);
     }
 
     public function run($id)

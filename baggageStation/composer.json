@@ -3,7 +3,8 @@
     "require": {
         "slim/slim": "~2.6",
         "nategood/httpful": "^0.2.19",
-        "slim/views": "*"
+        "slim/views": "*",
+        "twig/twig": "*"
     },
     "authors": [
         {
