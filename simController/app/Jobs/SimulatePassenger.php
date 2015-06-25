@@ -39,7 +39,7 @@ class SimulatePassenger extends Job implements SelfHandling, ShouldQueue
 
     protected function simulatePassengerOnInput($bordkartennummer)
     {
-        $response = HttpRequest::get("http://input.vaw.local:8888/passenger/{$bordkartennummer}")->send();
+        $response = HttpRequest::get("http://baggage.vaw.local:8888/passenger/{$bordkartennummer}")->send();
         if ($response->code < 300 && $response->body !== null) {
             return $response->body;
         }
