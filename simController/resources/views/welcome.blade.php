@@ -7,6 +7,7 @@
 
     </head>
     <body>
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col-xs-2">
@@ -15,8 +16,8 @@
                 </div>
                 <div class="col-xs-10">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                            60%
+                        <div id="queue-progress" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            0%
                         </div>
                     </div>
                 </div>
@@ -47,7 +48,8 @@
         <script type="text/javascript" src="{{ asset('/js/socket.io.js') }}"></script>
 
         <script type="text/javascript">
-            var counter = 0;
+            var _counter = 0;
+            var _total = 0;
 
             var socket = io('http://localhost:3000');
             socket.on("baggage-channel:App\\Events\\BaggageCreated", function(msg) {
@@ -60,14 +62,27 @@
                     "<td>" + msg.data.baggages.length + "</td>" +
                     "</tr>"
                 );
+                _counter++;
+                setProgressValue(Math.round((_counter/_total) * 100));
             });
 
             $("#run").on("click", function() {
                 $("#running").text("Running...");
                 $.post("/run", function() {
                     $("#running").text("");
+                }).done(function(data) {
+                    _total = data;
+                    console.log(data.length);
                 });
+                //setProgressValue(60);
             });
+
+            function setProgressValue(_progressVal) {
+                var _queueProgress = $("#queue-progress");
+                _queueProgress.css("width", _progressVal+"%");
+                _queueProgress.text(_progressVal+"%");
+                _queueProgress.attr("aria-valuenow", _progressVal);
+            }
 
         </script>
 
