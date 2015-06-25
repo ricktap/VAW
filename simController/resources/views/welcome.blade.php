@@ -72,9 +72,7 @@
                     $("#running").text("");
                 }).done(function(data) {
                     _total = data;
-                    console.log(data.length);
                 });
-                //setProgressValue(60);
             });
 
             function setProgressValue(_progressVal) {
